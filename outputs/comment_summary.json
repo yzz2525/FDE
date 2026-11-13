@@ -1,0 +1,17 @@
+{
+  "records": 113,
+  "comments": 102,
+  "posts": 11,
+  "threads": 12,
+  "topics": {
+    "胶水与贴合": 30,
+    "持久与脱落": 12,
+    "卸除与复用": 12,
+    "尺寸与曲率": 3,
+    "外观与自然感": 16,
+    "购买意向与链接": 18,
+    "教程与测评": 15,
+    "舒适与使用反应": 7
+  },
+  "method": "Visible public snapshots, not full comment pagination. Topics and sentiments are rule based."
+}

@@ -1,0 +1,27 @@
+const fs=require('fs'),vm=require('vm');
+const html=fs.readFileSync('outputs/market_dashboard.html','utf8');
+const ids=[...html.matchAll(/id="([^"]+)"/g)].map(m=>m[1]);
+if(new Set(ids).size!==ids.length)throw Error('Duplicate IDs');
+const nodes={};function make(){return {value:'',innerHTML:'',textContent:'',addEventListener(){},insertBefore(){},querySelector(){return {}},append(o){if(!this.value)this.value=o.value}}};ids.forEach(id=>nodes[id]=make());
+nodes.productSort.value='up';nodes['analysis-scope'].value='adult';nodes['analysis-commentScope'].value='presson';
+nodes.dimensionPlatform.value='Shopee BR';
+const ctx=vm.createContext({document:{getElementById(id){if(!nodes[id])throw Error('Missing '+id);return nodes[id]},createElement(){const n=make();Object.defineProperty(n,'innerHTML',{set(v){this._html=v;for(const m of v.matchAll(/id="([^"]+)"/g))nodes[m[1]]=make()},get(){return this._html}});return n}},console});
+const scripts=[...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(m=>m[1]);
+if(scripts.length!==3)throw Error('Script count');
+scripts.forEach(js=>{new Function(js);vm.runInContext(js,ctx)});
+if(nodes.productCount.textContent!==83||nodes.commentCount.textContent!==102)throw Error('Counts');
+nodes['analysis-platform'].value='Shopee BR';nodes['analysis-platform'].onchange();
+if(!nodes['analysis-platformRows'].innerHTML.includes('Shopee BR'))throw Error('Price analysis');
+nodes['analysis-commentScope'].value='all';nodes['analysis-commentScope'].onchange();
+if(!nodes['analysis-commentScopeNote'].textContent.includes('102'))throw Error('Comment analysis');
+nodes['analysis-topic'].value='胶水与贴合';nodes['analysis-topic'].onchange();
+if(!nodes['analysis-examples'].innerHTML.includes('讨论原页'))throw Error('Evidence');
+for(const m of html.matchAll(/href="#([^"]+)"/g))if(!nodes[m[1]])throw Error('Anchor '+m[1]);
+nodes.dimensionSales.value='monthly';nodes.dimensionPlatform.value='Shopee BR';nodes.dimensionBrand.value='';
+// Render through the page-next handler with current filters.
+nodes.dimensionNext.onclick();
+if(!nodes.dimensionRows.innerHTML.includes('795 vendido/mês'))throw Error('Shopee monthly evidence');
+const data=JSON.parse(fs.readFileSync('outputs/unified_public_data.json','utf8'));
+if(data.products.filter(r=>r.platform==='Shopee BR'&&r.monthly_sold_display!=null).length!==11)throw Error('Monthly count');
+if(data.tiktok_status.brazil_comments!==0)throw Error('TikTok missing data');
+console.log('Combined page: all scripts, IDs, anchors, channel dimensions, observed Shopee sales, analysis filters and comment evidence passed');

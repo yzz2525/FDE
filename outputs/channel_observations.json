@@ -1,0 +1,123 @@
+{
+  "retrieved_date": "2026-11-07",
+  "products": [
+    {
+      "platform": "Shopee BR",
+      "title": "Koasis Unhas Postiças 24 Peças Coloridas",
+      "price_brl": 28,
+      "rating": 4.9,
+      "seller": "Lovmecosmeticos",
+      "monthly_sold_display": 795,
+      "sold_signal": "5mil+ Vendido(s)",
+      "source_url": "https://shopee.com.br/lovme_beauty",
+      "source_age": "公开索引：上月抓取"
+    },
+    {
+      "platform": "Shopee BR",
+      "title": "PRESS ON NAILS FRENCH STARS Unhas Postiças Decoradas Douyin",
+      "price_brl": 16.98,
+      "rating": 5,
+      "seller": "CACARECOS",
+      "monthly_sold_display": 81,
+      "source_url": "https://shopee.com.br/xcacarecos",
+      "source_age": "公开索引：上周抓取"
+    },
+    {
+      "platform": "Shopee BR",
+      "title": "24 Unhas Postiças Quadradas Médias Nude Branco Degradê Coração Listras",
+      "price_brl": 22.9,
+      "rating": 4.8,
+      "seller": "MariSol Multimarcas",
+      "monthly_sold_display": 576,
+      "sold_signal": "2mil+ Vendido(s)",
+      "source_url": "https://shopee.com.br/marisolmultimarcas",
+      "source_age": "公开索引：2个月前抓取"
+    },
+    {
+      "platform": "Shopee BR",
+      "title": "Unhas Postiças Naturais Realistas Francesinha 24 Unidades",
+      "price_brl": 23.99,
+      "rating": 4.6,
+      "seller": "Angel_Achadinhos",
+      "monthly_sold_display": 71,
+      "sold_signal": "2mil+ Vendido(s)",
+      "source_url": "https://shopee.com.br/angelica_giangiacomo",
+      "source_age": "公开索引：2个月前抓取"
+    },
+    {
+      "platform": "Shopee BR",
+      "title": "Unhas Postiças Bailarina Realista Dafu",
+      "price_brl": 15,
+      "rating": 5,
+      "seller": "Nails Makeup",
+      "monthly_sold_display": 2,
+      "sold_signal": "3 Vendido(s)",
+      "source_url": "https://shopee.com.br/shop/429353204",
+      "source_age": "公开索引：4个月前抓取"
+    },
+    {
+      "platform": "Shopee BR",
+      "title": "Unhas Postiças 600 Unidades Honey Girl",
+      "price_brl": 45,
+      "rating": 5,
+      "seller": "Nails Makeup",
+      "monthly_sold_display": 1,
+      "sold_signal": "4 Vendido(s)",
+      "source_url": "https://shopee.com.br/shop/429353204",
+      "source_age": "公开索引：4个月前抓取"
+    },
+    {
+      "platform": "Shopee BR",
+      "title": "Unhas em Gel Postiças Realista Decoradas Extra Longa",
+      "price_brl": 50,
+      "rating": 5,
+      "seller": "Alana Silva Posticas Realistas Dec",
+      "monthly_sold_display": 1,
+      "sold_signal": "12 Vendido(s)",
+      "source_url": "https://shopee.com.br/alnnails",
+      "source_age": "公开索引：2个月前抓取"
+    },
+    {
+      "platform": "Shopee BR",
+      "title": "Unhas Postiças Decoradas Personagem",
+      "price_brl": 35,
+      "rating": 5,
+      "seller": "Vou D’make",
+      "monthly_sold_display": 6,
+      "sold_signal": "6 Vendido(s)",
+      "source_url": "https://shopee.com.br/stefanifers",
+      "source_age": "公开索引：3个月前抓取"
+    }
+  ],
+  "shopee_existing": {
+    "Macrilan Stiletto Bailarina 24": {
+      "seller": "Make.Mania",
+      "monthly_sold_display": 7,
+      "source_age": "公开索引：4天前抓取"
+    },
+    "Macrilan Amendoado Gel 24": {
+      "seller": "Make.Mania",
+      "monthly_sold_display": 11,
+      "source_age": "公开索引：4天前抓取"
+    },
+    "Sabrina Sato Francesinha SS2370": {
+      "seller": "Make.Mania",
+      "monthly_sold_display": 1,
+      "source_age": "公开索引：4天前抓取"
+    }
+  },
+  "tiktok_status": {
+    "checked_date": "2026-11-07",
+    "brazil_content": 0,
+    "brazil_comments": 0,
+    "result": "普通内容公开检索受 robots 限制；Creative Center 页面本轮获取失败；未取得巴西视频、播放或评论。",
+    "creative_url": "https://ads.tiktok.com/business/creativecenter/pc/en",
+    "keywords": [
+      "unhas postiças",
+      "unhas autocolantes",
+      "press on nails",
+      "francesinha",
+      "unhas realistas"
+    ]
+  }
+}

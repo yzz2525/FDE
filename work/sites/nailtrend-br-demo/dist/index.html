@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="巴西穿戴甲市场、竞品、评论与社媒趋势 AI 选品情报 Demo" />
+  <title>NailTrend BR · AI 选品情报</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark"><span></span><span></span><span></span></div>
+        <div><strong>NailTrend</strong><small>BR INTELLIGENCE</small></div>
+      </div>
+
+      <nav aria-label="主导航">
+        <button class="nav-item active" data-view="overview"><span class="nav-icon">⌁</span>市场总览</button>
+        <button class="nav-item" data-view="products"><span class="nav-icon">◇</span>商品雷达</button>
+        <button class="nav-item" data-view="competitors"><span class="nav-icon">◎</span>竞品监控</button>
+        <button class="nav-item" data-view="reviews"><span class="nav-icon">◌</span>评论洞察</button>
+        <button class="nav-item" data-view="social"><span class="nav-icon">↗</span>社媒趋势</button>
+        <button class="nav-item" data-view="ai-picks"><span class="nav-icon">✦</span>AI 选品中心<span class="nav-badge">5</span></button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="data-health">
+          <div class="health-head"><span>数据健康度</span><strong>92%</strong></div>
+          <div class="progress"><i style="width:92%"></i></div>
+          <small><span class="pulse-dot"></span>最后同步：今天 16:42</small>
+        </div>
+        <button class="nav-item" id="dataSourceBtn"><span class="nav-icon">⚙</span>数据源设置</button>
+        <div class="user-card">
+          <div class="avatar">ZJ</div>
+          <div><strong>选品团队</strong><small>管理员</small></div>
+          <span>···</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="打开菜单">☰</button>
+        <div class="page-heading">
+          <div class="breadcrumb">巴西市场 <span>/</span> <b id="breadcrumbCurrent">市场总览</b></div>
+          <h1 id="pageTitle">市场总览</h1>
+        </div>
+        <div class="top-actions">
+          <div class="demo-pill"><i></i> DEMO 数据</div>
+          <button class="icon-btn" aria-label="通知">♢<span class="alert-dot"></span></button>
+          <button class="secondary-btn" id="importBtn">↑ 导入数据</button>
+          <button class="primary-btn" id="exportBtn">导出报告</button>
+          <input type="file" id="csvInput" accept=".csv" hidden />
+        </div>
+      </header>
+
+      <section class="content">
+        <div class="filter-row">
+          <div class="date-switch" role="group" aria-label="时间范围">
+            <button data-days="7">7天</button><button class="active" data-days="30">30天</button><button data-days="90">90天</button>
+          </div>
+          <div class="filter-spacer"></div>
+          <label class="select-wrap"><span>平台</span><select id="platformSelect"><option>Mercado Livre</option><option>全部平台</option><option>Amazon BR</option><option>Shopee BR</option></select></label>
+          <label class="select-wrap"><span>类目</span><select><option>穿戴甲</option><option>甲片套装</option><option>美甲工具</option></select></label>
+          <button class="filter-btn">＋ 添加筛选</button>
+        </div>
+
+        <div id="overviewView" class="view active">
+          <div class="insight-banner">
+            <div class="ai-orb">✦</div>
+            <div><span>AI 今日洞察</span><p><strong>短方形裸粉法式款</strong>近 30 天热度增长 38%，且主流价格带内优质供给不足。建议优先测试，首批 500 套。</p></div>
+            <button data-view-target="ai-picks">查看选品建议 →</button>
+          </div>
+
+          <div class="metric-grid">
+            <article class="metric-card"><div class="metric-top"><span>市场商品数</span><i class="metric-icon purple">◇</i></div><div class="metric-value">12,846</div><div class="metric-note positive">↗ 8.2% <span>较上周期</span></div><div class="sparkline purple-line"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+            <article class="metric-card"><div class="metric-top"><span>近30天预估销量</span><i class="metric-icon mint">↟</i></div><div class="metric-value">286.4K</div><div class="metric-note positive">↗ 14.6% <span>较上周期</span></div><div class="sparkline mint-line"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+            <article class="metric-card"><div class="metric-top"><span>平均成交价</span><i class="metric-icon amber">R$</i></div><div class="metric-value">R$ 32.80</div><div class="metric-note negative">↘ 2.3% <span>较上周期</span></div><div class="sparkline amber-line"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+            <article class="metric-card"><div class="metric-top"><span>平均好评率</span><i class="metric-icon rose">♡</i></div><div class="metric-value">91.6%</div><div class="metric-note positive">↗ 1.8% <span>较上周期</span></div><div class="sparkline rose-line"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+          </div>
+
+          <div class="dashboard-grid two-one">
+            <article class="panel trend-panel">
+              <div class="panel-head"><div><h2>市场销量趋势</h2><p>商品累计销量快照增量 · 估算值</p></div><div class="legend"><span><i class="legend-dot purple-bg"></i>预估销量</span><span><i class="legend-line"></i>商品数</span></div></div>
+              <div class="chart-wrap">
+                <div class="y-labels"><span>12K</span><span>9K</span><span>6K</span><span>3K</span><span>0</span></div>
+                <svg class="area-chart" viewBox="0 0 760 230" preserveAspectRatio="none" aria-label="销量趋势图">
+                  <defs><linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7257f6" stop-opacity=".30"/><stop offset="1" stop-color="#7257f6" stop-opacity="0"/></linearGradient></defs>
+                  <g class="grid-lines"><line x1="0" x2="760" y1="20" y2="20"/><line x1="0" x2="760" y1="70" y2="70"/><line x1="0" x2="760" y1="120" y2="120"/><line x1="0" x2="760" y1="170" y2="170"/><line x1="0" x2="760" y1="220" y2="220"/></g>
+                  <path class="area" d="M0 180 C60 165 80 178 125 155 S210 145 255 130 S325 150 380 115 S460 122 505 86 S590 105 635 66 S705 70 760 32 L760 220 L0 220 Z"/>
+                  <path class="line-main" d="M0 180 C60 165 80 178 125 155 S210 145 255 130 S325 150 380 115 S460 122 505 86 S590 105 635 66 S705 70 760 32"/>
+                  <path class="line-secondary" d="M0 198 C75 187 120 190 175 175 S260 180 320 163 S415 160 475 145 S560 143 625 126 S700 128 760 112"/>
+                  <g class="point"><circle cx="635" cy="66" r="5"/><circle cx="635" cy="66" r="10" opacity=".15"/></g>
+                </svg>
+                <div class="x-labels"><span>10/08</span><span>10/13</span><span>10/18</span><span>10/23</span><span>10/28</span><span>11/02</span><span>11/06</span></div>
+              </div>
+            </article>
+
+            <article class="panel price-panel">
+              <div class="panel-head"><div><h2>价格带机会</h2><p>销量占比 vs 商品供给</p></div><button class="more-btn">···</button></div>
+              <div class="price-bars">
+                <div class="price-row"><div><b>R$ 0–20</b><span>入门</span></div><div class="dual-bar"><i class="supply" style="width:72%"></i><i class="sales" style="width:51%"></i></div><strong>21%</strong></div>
+                <div class="price-row highlight"><div><b>R$ 20–35</b><span>主流</span></div><div class="dual-bar"><i class="supply" style="width:61%"></i><i class="sales" style="width:92%"></i></div><strong>38%</strong></div>
+                <div class="price-row"><div><b>R$ 35–50</b><span>中高端</span></div><div class="dual-bar"><i class="supply" style="width:44%"></i><i class="sales" style="width:57%"></i></div><strong>25%</strong></div>
+                <div class="price-row"><div><b>R$ 50+</b><span>高端</span></div><div class="dual-bar"><i class="supply" style="width:26%"></i><i class="sales" style="width:31%"></i></div><strong>16%</strong></div>
+              </div>
+              <div class="opportunity-note"><span>机会</span><p><b>R$ 20–35</b> 销量占比高于商品供给 12 个百分点</p></div>
+            </article>
+          </div>
+
+          <div class="dashboard-grid one-two">
+            <article class="panel concerns-panel">
+              <div class="panel-head"><div><h2>用户关注 Top 10</h2><p>8,426 条葡语评论 · 属性级情感</p></div><button data-view-target="reviews">全部洞察 →</button></div>
+              <div class="concern-list" id="concernList"></div>
+            </article>
+
+            <article class="panel products-panel">
+              <div class="panel-head"><div><h2>增长最快商品</h2><p>按近 30 天预估销量增速</p></div><button data-view-target="products">查看商品池 →</button></div>
+              <div class="product-table-wrap">
+                <table class="product-table">
+                  <thead><tr><th>商品</th><th>价格</th><th>30天预估销量</th><th>增速</th><th>评分</th><th>机会分</th></tr></thead>
+                  <tbody id="productTable"></tbody>
+                </table>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div id="genericView" class="view">
+          <div class="section-intro"><div><span class="eyebrow" id="viewEyebrow">MARKET INTELLIGENCE</span><h2 id="genericTitle">商品雷达</h2><p id="genericDesc">查看商品表现、价格变化和增长机会。</p></div><div class="search-box">⌕ <input id="searchInput" placeholder="搜索商品、卖家或款式…" /></div></div>
+          <div id="genericContent"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="toast" id="toast"><span>✓</span><div><strong id="toastTitle">操作成功</strong><small id="toastText">报告已生成</small></div></div>
+
+  <div class="modal-backdrop" id="dataModal">
+    <div class="modal">
+      <button class="modal-close" data-close-modal>×</button>
+      <span class="eyebrow">DATA SOURCES</span><h2>数据源状态</h2><p>Demo 当前使用模拟数据。接入凭证后即可替换为真实采集任务。</p>
+      <div class="source-list">
+        <div><i class="source-logo ml">M</i><span><b>Mercado Livre</b><small>商品、评论、价格快照</small></span><em class="status-demo">Demo</em></div>
+        <div><i class="source-logo internal">I</i><span><b>内部 ERP</b><small>成本、库存、订单</small></span><em class="status-wait">待接入</em></div>
+        <div><i class="source-logo social">♪</i><span><b>外部社媒</b><small>内容、互动、评论趋势</small></span><em class="status-wait">待授权</em></div>
+      </div>
+      <button class="primary-btn full" data-close-modal>我知道了</button>
+    </div>
+  </div>
+
+  <div class="drawer-backdrop" id="productDrawer">
+    <aside class="drawer"><button class="modal-close" data-close-drawer>×</button><div id="drawerContent"></div></aside>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+{
+  "run_id": "20261107T093217Z",
+  "checked_at": "2026-11-07T09:32:30.590283+00:00",
+  "network": {
+    "country_code": "BR",
+    "country": null,
+    "verified": true,
+    "route": "explicit_local_proxy"
+  },
+  "records": [
+    {
+      "platform": "Mercado Livre",
+      "url": "https://lista.mercadolivre.com.br/unhas-posticas",
+      "checked_at": "2026-11-07T09:32:18.847919+00:00",
+      "status": "login_required",
+      "new_products": 0,
+      "new_comments": 0,
+      "http_status": 200,
+      "final_url": "https://www.mercadolivre.com.br/gz/account-verification",
+      "page_title": "Mercado Libre",
+      "html_bytes": 42097,
+      "product_schema_markers": 0,
+      "video_schema_markers": 0
+    },
+    {
+      "platform": "Mercado Livre API",
+      "url": "https://api.mercadolibre.com/sites/MLB/search?q=unhas%20posticas&limit=10",
+      "checked_at": "2026-11-07T09:32:18.848221+00:00",
+      "status": "http_error",
+      "new_products": 0,
+      "new_comments": 0,
+      "http_status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "platform": "Shopee BR",
+      "url": "https://shopee.com.br/search?keyword=unhas%20posti%C3%A7as",
+      "checked_at": "2026-11-07T09:32:18.848492+00:00",
+      "status": "html_received_needs_platform_parser",
+      "new_products": 0,
+      "new_comments": 0,
+      "http_status": 200,
+      "final_url": "https://shopee.com.br/search",
+      "page_title": "",
+      "html_bytes": 155908,
+      "product_schema_markers": 0,
+      "video_schema_markers": 0
+    },
+    {
+      "platform": "Amazon BR",
+      "url": "https://www.amazon.com.br/s?k=unhas+posticas",
+      "checked_at": "2026-11-07T09:32:20.366667+00:00",
+      "status": "http_error",
+      "new_products": 0,
+      "new_comments": 0,
+      "http_status": 503,
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "platform": "TikTok",
+      "url": "https://www.tiktok.com/tag/unhasposticas",
+      "checked_at": "2026-11-07T09:32:21.872820+00:00",
+      "status": "html_received_needs_platform_parser",
+      "new_products": 0,
+      "new_comments": 0,
+      "http_status": 200,
+      "final_url": "https://www.tiktok.com/tag/unhasposticas",
+      "page_title": "TikTok - Make Your Day",
+      "html_bytes": 415681,
+      "product_schema_markers": 0,
+      "video_schema_markers": 0
+    },
+    {
+      "platform": "TikTok Creative Center",
+      "url": "https://ads.tiktok.com/business/creativecenter/pc/en",
+      "checked_at": "2026-11-07T09:32:21.907843+00:00",
+      "status": "html_received_needs_platform_parser",
+      "new_products": 0,
+      "new_comments": 0,
+      "http_status": 200,
+      "final_url": "https://ads.tiktok.com/creative/creativeCenter",
+      "page_title": "TikTok One Creative Suite",
+      "html_bytes": 90606,
+      "product_schema_markers": 0,
+      "video_schema_markers": 0
+    },
+    {
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/explore/tags/unhasposticas/",
+      "checked_at": "2026-11-07T09:32:22.444227+00:00",
+      "status": "html_received_needs_platform_parser",
+      "new_products": 0,
+      "new_comments": 0,
+      "http_status": 200,
+      "final_url": "https://www.instagram.com/explore/tags/unhasposticas/",
+      "page_title": "Instagram",
+      "html_bytes": 510744,
+      "product_schema_markers": 0,
+      "video_schema_markers": 0
+    },
+    {
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/results?search_query=unhas+posticas+brasil",
+      "checked_at": "2026-11-07T09:32:26.091098+00:00",
+      "status": "html_received_needs_platform_parser",
+      "new_products": 0,
+      "new_comments": 0,
+      "http_status": 200,
+      "final_url": "https://www.youtube.com/results",
+      "page_title": "",
+      "html_bytes": 1266296,
+      "product_schema_markers": 0,
+      "video_schema_markers": 0
+    }
+  ],
+  "browser_evidence": [
+    {
+      "platform": "Shopee BR",
+      "status": "traffic_verification",
+      "observed_final_path": "shopee.com.br/verify/traffic/error",
+      "method": "local Edge browser observed URL"
+    }
+  ],
+  "new_products": 0,
+  "new_comments": 0,
+  "note": "HTTP200 or HTML received is not proof of data extraction. No CAPTCHA solved or session credentials exported.",
+  "new_social_videos": 7,
+  "video_detail_attempts": [
+    {
+      "url": "https://www.youtube.com/watch?v=gIaZl20goa0",
+      "status": "failed",
+      "comments": 0,
+      "error": "URLError: <urlopen error _ssl.c:1015: The handshake operation timed out>"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=MxNI4cOFuM8",
+      "status": "html_parsed",
+      "comments": 0
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=-oAwNlWgIlM",
+      "status": "html_parsed",
+      "comments": 0
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=NQbHa-6-n00",
+      "status": "html_parsed",
+      "comments": 0
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=0QuuzI6AdUk",
+      "status": "html_parsed",
+      "comments": 0
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=VkxCd2IHLoc",
+      "status": "html_parsed",
+      "comments": 0
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=cESkfl-dcEY",
+      "status": "html_parsed",
+      "comments": 0
+    }
+  ]
+}
