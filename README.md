@@ -4,7 +4,7 @@
 
 ## 开发
 
-需要 Python 3.10+。从仓库根目录运行 `python outputs/build_unified.py`，然后打开 `outputs/market_dashboard.html`。有 Node.js 时运行 `node work/check_combined.cjs` 检查当前样本与交互。根目录 index.html 是发布快照，交付时同步更新。
+需要 Python 3.10+。从仓库根目录运行 `python outputs/build_unified.py`，然后打开 `outputs/market_dashboard.html`。有 Node.js 时运行 `node work/check_combined.cjs` 检查当前样本与交互。运行 `python build_pages.py outputs/market_dashboard.html` 生成根目录九个栏目页及共享样式、脚本。打开根目录 index.html，导航会在独立页面之间切换。发布时一起提交生成的页面和共享文件。
 
 - `outputs/*_template.html`、`channel_extension.html`：页面源码。
 - `build_unified.py`、`enrich_channels.py`：合并与生成。
