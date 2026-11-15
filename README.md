@@ -4,7 +4,16 @@
 
 ## 开发
 
-需要 Python 3.10+。从仓库根目录运行 `python outputs/build_unified.py`，然后打开 `outputs/market_dashboard.html`。有 Node.js 时运行 `node work/check_combined.cjs` 检查当前样本与交互。运行 `python build_pages.py outputs/market_dashboard.html` 生成根目录九个栏目页及共享样式、脚本。打开根目录 index.html，导航会在独立页面之间切换。发布时一起提交生成的页面和共享文件。
+需要 Python 3.10+ 和 Node.js。从仓库根目录依次运行：
+
+```sh
+python outputs/build_unified.py
+node work/check_combined.cjs
+```
+
+第一步用仓库内已有的样本生成 `outputs/unified_public_data.json` 和 `outputs/market_dashboard.html`。`unified_public_data.json` 是构建产物，仓库没有提交。第二步会同时读取这两个文件，因此新克隆后要先构建，再运行检查。这两步可离线完成。
+
+如需重新生成根目录的九个栏目页及共享样式、脚本，再运行 `python build_pages.py outputs/market_dashboard.html`。打开根目录 `index.html` 查看分栏目页面。发布时一起提交生成的页面和共享文件。
 
 - `outputs/*_template.html`、`channel_extension.html`：页面源码。
 - `build_unified.py`、`enrich_channels.py`：合并与生成。
