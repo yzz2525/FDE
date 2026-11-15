@@ -1,0 +1,137 @@
+[
+  {
+    "url": "https://lista.mercadolivre.com.br/unhas-posticas-decoradas-glitter",
+    "attempted_at": "2026-11-15T19:20:20+08:00",
+    "http_status": 403,
+    "final_url": "https://lista.mercadolivre.com.br/unhas-posticas-decoradas-glitter",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://produto.mercadolivre.com.br/MLB-2056194557-kit-unhas-posticas-100-un-cola-3g-alicate-lixa-para-unhas-_JM",
+    "attempted_at": "2026-11-15T19:20:20+08:00",
+    "http_status": 403,
+    "final_url": "https://produto.mercadolivre.com.br/MLB-2056194557-kit-unhas-posticas-100-un-cola-3g-alicate-lixa-para-unhas-_JM",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://produto.mercadolivre.com.br/MLB-2827861305-unhas-posticas-grande-autocolante-bailarina-amor-e-anjo-_JM",
+    "attempted_at": "2026-11-15T19:20:20+08:00",
+    "http_status": 403,
+    "final_url": "https://produto.mercadolivre.com.br/MLB-2827861305-unhas-posticas-grande-autocolante-bailarina-amor-e-anjo-_JM",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://produto.mercadolivre.com.br/MLB-3057603298-unhas-posticas-metalizadas-c12-pecas-autocolante-escolha-_JM",
+    "attempted_at": "2026-11-15T19:20:20+08:00",
+    "http_status": 403,
+    "final_url": "https://produto.mercadolivre.com.br/MLB-3057603298-unhas-posticas-metalizadas-c12-pecas-autocolante-escolha-_JM",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://produto.mercadolivre.com.br/MLB-3380005767-unhas-posticas-unha-decorada-realista-media-com-adesivo-_JM",
+    "attempted_at": "2026-11-15T19:20:20+08:00",
+    "http_status": 403,
+    "final_url": "https://produto.mercadolivre.com.br/MLB-3380005767-unhas-posticas-unha-decorada-realista-media-com-adesivo-_JM",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://shopee.com.br/alnnails",
+    "attempted_at": "2026-11-15T19:20:20+08:00",
+    "http_status": 200,
+    "final_url": "https://shopee.com.br/alnnails",
+    "title": [],
+    "bytes_decoded": 200415,
+    "monthly_matches": 0,
+    "jsonld_products": 0
+  },
+  {
+    "url": "https://shopee.com.br/angelica_giangiacomo",
+    "attempted_at": "2026-11-15T19:20:21+08:00",
+    "http_status": 200,
+    "final_url": "https://shopee.com.br/angelica_giangiacomo",
+    "title": [],
+    "bytes_decoded": 200415,
+    "monthly_matches": 0,
+    "jsonld_products": 0
+  },
+  {
+    "url": "https://shopee.com.br/lovme_beauty",
+    "attempted_at": "2026-11-15T19:20:21+08:00",
+    "http_status": 200,
+    "final_url": "https://shopee.com.br/lovme_beauty",
+    "title": [],
+    "bytes_decoded": 200415,
+    "monthly_matches": 0,
+    "jsonld_products": 0
+  },
+  {
+    "url": "https://shopee.com.br/make.mania",
+    "attempted_at": "2026-11-15T19:20:22+08:00",
+    "http_status": 200,
+    "final_url": "https://shopee.com.br/make.mania",
+    "title": [],
+    "bytes_decoded": 200415,
+    "monthly_matches": 0,
+    "jsonld_products": 0
+  },
+  {
+    "url": "https://shopee.com.br/make.mania?entryPoint=ShopByPDP",
+    "attempted_at": "2026-11-15T19:20:22+08:00",
+    "http_status": 200,
+    "final_url": "https://shopee.com.br/make.mania?entryPoint=ShopByPDP",
+    "title": [],
+    "bytes_decoded": 200415,
+    "monthly_matches": 0,
+    "jsonld_products": 0
+  },
+  {
+    "url": "https://shopee.com.br/marisolmultimarcas",
+    "attempted_at": "2026-11-15T19:20:22+08:00",
+    "http_status": 200,
+    "final_url": "https://shopee.com.br/marisolmultimarcas",
+    "title": [],
+    "bytes_decoded": 200415,
+    "monthly_matches": 0,
+    "jsonld_products": 0
+  },
+  {
+    "url": "https://shopee.com.br/product/1766965701/58257273585",
+    "attempted_at": "2026-11-15T19:20:22+08:00",
+    "http_status": 200,
+    "final_url": "https://shopee.com.br/product/1766965701/58257273585",
+    "title": [],
+    "bytes_decoded": 200415,
+    "monthly_matches": 0,
+    "jsonld_products": 0
+  },
+  {
+    "url": "https://shopee.com.br/shop/429353204",
+    "attempted_at": "2026-11-15T19:20:22+08:00",
+    "http_status": 200,
+    "final_url": "https://shopee.com.br/shop/429353204",
+    "title": [],
+    "bytes_decoded": 200415,
+    "monthly_matches": 0,
+    "jsonld_products": 0
+  },
+  {
+    "url": "https://shopee.com.br/stefanifers",
+    "attempted_at": "2026-11-15T19:20:24+08:00",
+    "http_status": 200,
+    "final_url": "https://shopee.com.br/stefanifers",
+    "title": [],
+    "bytes_decoded": 200415,
+    "monthly_matches": 0,
+    "jsonld_products": 0
+  },
+  {
+    "url": "https://shopee.com.br/xcacarecos",
+    "attempted_at": "2026-11-15T19:20:24+08:00",
+    "http_status": 200,
+    "final_url": "https://shopee.com.br/xcacarecos",
+    "title": [],
+    "bytes_decoded": 200415,
+    "monthly_matches": 0,
+    "jsonld_products": 0
+  }
+]
