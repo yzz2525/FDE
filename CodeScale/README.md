@@ -133,7 +133,6 @@ python -m http.server 4173 --directory dist
 
 ```text
 codescale-mvp/
-├─ .openai/hosting.json   # Sites 部署配置
 ├─ dist/
 │  ├─ index.html          # 页面结构
 │  ├─ styles.css          # 基础样式
@@ -141,6 +140,8 @@ codescale-mvp/
 │  └─ app.js              # 数据、计算和交互逻辑
 └─ README.md              # 使用文档
 ```
+
+用于 ChatGPT Sites 发布的本地工作副本中还包含 `.openai/hosting.json`；公开 GitHub 目录不包含这项站点绑定配置。
 
 ## 当前限制
 
