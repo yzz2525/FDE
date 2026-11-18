@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f1ea">
+  <title>CodeScale 码尺 · AI 价值验收台</title>
+  <meta name="description" content="连接改造前基线、AI 投入、人工验收与返工记录，验证每个合格业务成果的真实成本与业务改善。">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="v2.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div><strong>CodeScale</strong><small>码尺 · AI 价值验收台</small></div>
+      </div>
+      <nav class="nav" aria-label="主导航">
+        <button class="nav-item active" data-view="overview"><span>⌂</span>项目总览</button>
+        <button class="nav-item" data-view="tasks"><span>▤</span>任务台账</button>
+        <button class="nav-item" data-view="diagnosis"><span>◇</span>效能诊断</button>
+        <button class="nav-item" data-view="reports"><span>↗</span>价值报告</button>
+      </nav>
+      <div class="sidebar-card">
+        <span class="eyebrow">数据完整度</span>
+        <div class="progress-row"><strong id="dataQuality">--</strong><span id="qualityLabel">计算中</span></div>
+        <div class="progress"><i id="qualityBar" style="width:0"></i></div>
+        <p id="qualityHint">正在检查基线、验收规则与证据记录。</p>
+      </div>
+      <div class="account"><div class="avatar">YZ</div><div><strong>演示企业</strong><small>管理员</small></div><button aria-label="更多">···</button></div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn" aria-label="打开菜单">☰</button>
+        <div class="crumb"><span>企业工作区</span><b>/</b><strong id="currentView">效能总览</strong></div>
+        <div class="top-actions">
+          <button class="period-btn" id="periodBtn">最近 30 天⌄</button>
+          <button class="primary-btn" id="openModal">＋ 记录任务</button>
+        </div>
+      </header>
+
+      <section class="view active" id="overviewView">
+        <div class="hero-row">
+          <div><span class="eyebrow">VERIFY FIRST · 经营视角</span><h1>验证 AI 改造<br><em>有没有真正创造价值。</em></h1><p>改造前基线、真实投入、人工验收与返工被放在同一把尺上。</p></div>
+          <div class="hero-note"><span>本期关键发现</span><strong id="heroFinding">知识库问答的合格成果成本最低</strong><p id="heroSub">相比团队均值低 28%，适合扩大使用范围。</p></div>
+        </div>
+        <div class="metric-grid" id="metricGrid"></div>
+        <div class="dashboard-grid">
+          <article class="panel chart-panel">
+            <div class="panel-head"><div><span class="eyebrow">基线对比</span><h2>合格成果全成本</h2></div><div class="legend"><span><i class="baseline-dot"></i>改造前</span><span><i></i>改造后</span></div></div>
+            <div class="chart-wrap"><div class="y-labels" id="chartYLabels"></div><svg id="costChart" viewBox="0 0 720 240" role="img" aria-label="各任务改造前后合格成果成本对比图"></svg></div>
+          </article>
+          <article class="panel mix-panel">
+            <div class="panel-head"><div><span class="eyebrow">改造后成本构成</span><h2>钱花在哪里</h2></div></div>
+            <div class="donut-wrap"><div class="donut" id="donut"><div><strong id="donutTotal">¥0</strong><span>总投入</span></div></div><div class="mix-list" id="mixList"></div></div>
+          </article>
+        </div>
+        <article class="panel task-panel">
+          <div class="panel-head"><div><span class="eyebrow">重点任务</span><h2>改造前后表现</h2></div><button class="text-btn" data-go="tasks">查看全部 →</button></div>
+          <div class="table-wrap"><table><thead><tr><th>业务任务</th><th>部门</th><th>基线成果成本</th><th>当前成果成本</th><th>成本变化</th><th>状态</th></tr></thead><tbody id="overviewTable"></tbody></table></div>
+        </article>
+      </section>
+
+      <section class="view" id="tasksView">
+        <div class="page-title"><div><span class="eyebrow">SCALE · 数据底座</span><h1>任务台账</h1><p>每条记录都同时保留改造前基线、真实投入、验收口径与证据状态。</p></div><button class="primary-btn" id="openModal2">＋ 记录任务</button></div>
+        <div class="filterbar"><input id="searchInput" type="search" placeholder="搜索任务、部门或验收负责人"><select id="statusFilter"><option value="all">全部状态</option><option value="improved">已验证改善</option><option value="review">待复核</option><option value="risk">未达基线</option></select><button id="exportCsv">导出 CSV</button></div>
+        <article class="panel"><div class="table-wrap"><table><thead><tr><th>业务任务</th><th>验收规则</th><th>基线成本</th><th>当前成本</th><th>成功率变化</th><th>证据</th><th>诊断</th><th></th></tr></thead><tbody id="taskTable"></tbody></table></div><div class="empty" id="emptyState" hidden>没有匹配的任务记录。</div></article>
+      </section>
+
+      <section class="view" id="diagnosisView">
+        <div class="page-title"><div><span class="eyebrow">EVALUATE → OPTIMIZE</span><h1>效能诊断</h1><p>只基于已登记的基线、成本与验收结果给出判断，不虚构收益。</p></div><button class="outline-btn" id="refreshDiagnosis">重新计算</button></div>
+        <div class="diagnosis-summary" id="diagnosisSummary"></div>
+        <div class="recommendation-list" id="recommendationList"></div>
+      </section>
+
+      <section class="view" id="reportsView">
+        <div class="page-title"><div><span class="eyebrow">VERIFY · 价值复核</span><h1>价值报告</h1><p>把“用了 AI”转化为成本、产出和改进结果。</p></div><button class="primary-btn" id="printReport">打印 / 保存 PDF</button></div>
+        <article class="report-card" id="reportCard">
+          <div class="report-cover"><div><span class="eyebrow">CODESCALE · MONTHLY REVIEW</span><h2>AI 效能月度报告</h2><p id="reportDate"></p></div><div class="report-seal">CS<br><small>VERIFIED</small></div></div>
+          <div class="report-kpis" id="reportKpis"></div>
+          <div class="report-section"><span class="eyebrow">01 · 管理摘要</span><h3>本期判断</h3><p id="reportNarrative"></p></div>
+          <div class="report-section"><span class="eyebrow">02 · 改造前后对比</span><div class="table-wrap"><table class="report-table"><thead><tr><th>任务</th><th>基线成果成本</th><th>当前成果成本</th><th>成本变化</th><th>成功率变化</th></tr></thead><tbody id="reportEvidenceTable"></tbody></table></div></div>
+          <div class="report-section"><span class="eyebrow">03 · 建议动作</span><div id="reportActions" class="report-actions"></div></div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="modal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-head"><div><span class="eyebrow">NEW RECORD</span><h2 id="modalTitle">记录 AI 业务任务</h2></div><button id="closeModal" aria-label="关闭">×</button></div>
+      <form id="taskForm">
+        <div class="form-section"><div class="form-section-title"><span>01</span><div><strong>任务与验收</strong><small>先定义什么算合格，再记录成本。</small></div></div><div class="form-grid"><label class="wide">任务名称<input name="name" required placeholder="例如：售后知识库问答"></label><label>所属部门<input name="department" required placeholder="例如：客户成功部"></label><label>记录日期<input name="date" type="date" required></label><label class="wide">合格成果标准<input name="acceptanceRule" required placeholder="例如：答案引用有效来源，关键字段无事实错误"></label><label>验收负责人<input name="acceptanceOwner" required placeholder="例如：客服主管"></label><label>证据状态<select name="evidence" required><option value="complete">完整：有基线与验收记录</option><option value="partial">部分：缺少抽样或原始记录</option><option value="claim">口径：仅业务方陈述</option></select></label></div></div>
+        <div class="form-section"><div class="form-section-title"><span>02</span><div><strong>改造前基线</strong><small>使用同一观察周期和验收口径。</small></div></div><div class="form-grid three"><label>基线总成本（元）<input name="baselineCost" type="number" min="0" step="0.01" required value="600"></label><label>基线合格成果数<input name="baselineQualified" type="number" min="1" required value="35"></label><label>基线平均时长（分钟）<input name="baselineMinutes" type="number" min="0" step="0.1" required value="12"></label></div></div>
+        <div class="form-section"><div class="form-section-title"><span>03</span><div><strong>改造后数据</strong><small>拆开 AI、人工、返工、集成和运维成本。</small></div></div><div class="form-grid three"><label>AI 费用（元）<input name="aiCost" type="number" min="0" step="0.01" required value="100"></label><label>人工成本（元）<input name="humanCost" type="number" min="0" step="0.01" required value="200"></label><label>返工成本（元）<input name="reworkCost" type="number" min="0" step="0.01" required value="50"></label><label>集成摊销（元）<input name="integrationCost" type="number" min="0" step="0.01" value="80"></label><label>运维成本（元）<input name="opsCost" type="number" min="0" step="0.01" value="40"></label><label>任务总数<input name="total" type="number" min="1" required value="50"></label><label>合格成果数<input name="qualified" type="number" min="0" required value="40"></label><label>人工接管数<input name="handovers" type="number" min="0" required value="5"></label><label>当前平均时长（分钟）<input name="minutes" type="number" min="0" step="0.1" required value="4.5"></label></div></div>
+        <div class="formula-preview"><span>合格成果全成本对比</span><strong id="formulaResult">填写数据后自动计算</strong><small>改造后：（AI + 人工 + 返工 + 集成摊销 + 运维）÷ 合格成果数</small></div>
+        <div class="modal-actions"><button type="button" class="ghost-btn" id="cancelModal">取消</button><button type="submit" class="primary-btn">保存并诊断</button></div>
+      </form>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
+
